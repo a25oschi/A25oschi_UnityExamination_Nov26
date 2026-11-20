@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
+using TMPro;  
+using UnityEngine.SceneManagement;  
+
 
 // This component can be used together with the UnityEventOnTrigger-component to make a character in your game have health
 // If you don't know how to use UnityEvents, watch this video first: https://play.his.se/media/UnityEvents/0_nq9m8qin
@@ -25,6 +28,8 @@ public class Health : MonoBehaviour
     private float currentHealth;
     private float invulnerabilityTimer;
     private bool isHurt = false;
+    private TextMeshProUGUI textHealthNumber;  
+
     
     [Tooltip("Event triggered when this object takes damage")]
     [SerializeField] UnityEvent OnDamaged;
@@ -42,6 +47,7 @@ public class Health : MonoBehaviour
     {
         currentHealth = maxHealth;
         invulnerabilityTimer = safeTime;
+        textHealthNumber = GameObject.Find("TextHealthNumber").GetComponent<TextMeshProUGUI> ();  
     }
 
     private void Update()
@@ -60,6 +66,7 @@ public class Health : MonoBehaviour
                 OnExitSafeTime?.Invoke();
             }
         }
+        textHealthNumber.text = "Health: " + currentHealth.ToString("F0");  
     }
 
     public void Heal(float healAmount)
@@ -111,6 +118,8 @@ public class Health : MonoBehaviour
         if (currentHealth <= minHealth)
         {
             OnDie?.Invoke();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+
             //Add animation-trigger here
         }
     }
