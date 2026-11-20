@@ -559,7 +559,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 507907662}
         m_TargetAssemblyTypeName: AudioSlider, Assembly-CSharp
         m_MethodName: SetLevel
         m_Mode: 0
@@ -1393,14 +1393,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1387985233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc47e15bdfe93f94495bae8317626192, type: 3}
+  m_Script: {fileID: 11500000, guid: 24b66944294b56542877a408f35d12cd, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AudioSlider
-  mixer: {fileID: 24100000, guid: b83aa7fe9c242924ab5d14c03279113d, type: 2}
-  audioMixerParameter: MasterPitch
-  slider: {fileID: 355097896}
-  sliderValueText: {fileID: 1075079075}
-  valueScaleType: 0
+  m_EditorClassIdentifier: Assembly-CSharp::PitchSlider
+  audioMixer: {fileID: 24100000, guid: b83aa7fe9c242924ab5d14c03279113d, type: 2}
+  pitchParameterName: MasterPitch
+  pitchSlider: {fileID: 355097896}
 --- !u!1 &1415684150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,7 +1504,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e0d7bab9d8bc53940b132201fa6794b2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.49
+  m_Volume: 0.346
   m_Pitch: 1
   Loop: 1
   Mute: 0
