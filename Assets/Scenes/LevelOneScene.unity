@@ -1774,6 +1774,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 265300196293295370, guid: 2cf0786218a26554bba9728248576fcf, type: 3}
+      propertyPath: m_text
+      value: My name is Bill.
+      objectReference: {fileID: 0}
     - target: {fileID: 6988591895823492221, guid: 2cf0786218a26554bba9728248576fcf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.04
@@ -8618,6 +8622,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 265300196293295370, guid: 2cf0786218a26554bba9728248576fcf, type: 3}
+      propertyPath: m_text
+      value: My name is Bull.
+      objectReference: {fileID: 0}
     - target: {fileID: 6988591895823492221, guid: 2cf0786218a26554bba9728248576fcf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.16
